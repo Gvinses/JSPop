@@ -10,12 +10,17 @@
             top: 50%;
             left: 50%;
             transform: translateX(-100%) translateY(-100%);
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
+    <script src="popUp.js"></script>
+    <link rel="stylesheet" href="popupAnimation-flex-75rZ.css">
 </head>
 <body>
 
-<button onclick="showPopUp()">
+<button id="show-popup">
     show popup
 </button>
 
@@ -25,13 +30,6 @@
     <button id="secondPopupButton">Second Button</button>
 </div>
 
-<div class="popup" id="testChildPopup">
-    <h1>Child popup test</h1>
-    <button id="closeChilePopupButton">Close</button>
-    <button id="secondChildPopupButton">Second Button</button>
-</div>
-
-
-<script src="popUp.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
