@@ -6,6 +6,10 @@ let testPopUp = new PopUp(
         'origin': body,
         'template': popup,
         // 'display': 'grid',
+        'animations': {
+            'show': 'show-75rZ',
+            'hide': 'hide-75rZ'
+        }
     },
     {
         'origin': '#closePopupButton',
@@ -27,9 +31,6 @@ let testPopUp = new PopUp(
 
 testPopUp.load()
 
-console.log(testPopUp)
-
 document.querySelector('#show-popup').addEventListener('click', (e) => {
-    console.log(e)
     testPopUp.show()
 })

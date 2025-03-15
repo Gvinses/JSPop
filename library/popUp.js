@@ -31,9 +31,9 @@ class PopUp {
 
 
     show() {
-        if (document.head.innerHTML.includes('<link rel="stylesheet" href="popupAnimation-flex-75rZ.css">')) {
-            this.content.template.classList.remove('hide')
-            this.content.template.classList.add('show')
+        if (this.content.animations !== undefined){
+            this.content.template.classList.remove(this.content.animations.hide)
+            this.content.template.classList.add(this.content.animations.show)
         } else {
             if (this.content.display !== undefined) {
                 this.content.template.style.display = String(this.content.display)
@@ -44,9 +44,9 @@ class PopUp {
     }
 
     hide() {
-        if (document.head.innerHTML.includes('<link rel="stylesheet" href="popupAnimation-flex-75rZ.css">')) {
-            this.content.template.classList.remove('show')
-            this.content.template.classList.add('hide')
+        if (this.content.animations !== undefined) {
+            this.content.template.classList.remove(this.content.animations.show)
+            this.content.template.classList.add(this.content.animations.hide)
         } else {
             this.content.template.style.display = 'none'
         }
