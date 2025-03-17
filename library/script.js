@@ -5,17 +5,18 @@ let testPopUp = new PopUp(
     {
         'origin': body,
         'template': popup,
-        // 'display': 'grid',
+        'display': 'flex',
         'animations': {
             'show': 'show-75rZ',
-            'hide': 'hide-75rZ'
+            'hide': 'hide-75rZ',
+            'error': 'error-75rZ',
         }
     },
     {
         'origin': '#closePopupButton',
         'event': 'click',
         'func': (event) => {
-            testPopUp.self.style.background = 'red'
+            testPopUp.self.style.background = 'green'
             testPopUp.hide()
             // testPopUp.deleteFromHTML()
         }
@@ -24,7 +25,7 @@ let testPopUp = new PopUp(
         'origin': '#secondPopupButton',
         'event': 'click',
         'func': (event) => {
-            testPopUp.self.style.background = `green`
+            // testPopUp.self.style.background = `green`
         }
     },
 )

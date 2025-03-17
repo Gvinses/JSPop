@@ -7,6 +7,7 @@
     animation: hide-animation 0.3s ease-out forwards;
 }
 
+
 @keyframes show-animation {
     0% {
         opacity: 0;

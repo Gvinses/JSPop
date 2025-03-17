@@ -21,8 +21,25 @@ class PopUp {
         })
     }
 
+    checkObjectsCorrect() {
+        if (this.content.animations.show === undefined || this.content.animations.hide === undefined) {
+            let notFound = []
+            if (this.content.animations.show === undefined) {
+                notFound.push('show')
+            }
+            if (this.content.animations.hide === undefined) {
+                notFound.push('hide')
+            }
+
+            throw new ReferenceError('Not all animations correct, expected: ' + notFound.join(' '))
+        }
+    }
+
     load() {
         this.applyFunctions()
+        if (this.content.animations !== undefined) {
+            this.checkObjectsCorrect()
+        }
     }
 
     deleteFromHTML() {
@@ -30,9 +47,16 @@ class PopUp {
     }
 
 
+    clearTemplateClasses() {
+        this.content.template.classList.remove(this.content.animations.show)
+        this.content.template.classList.remove(this.content.animations.hide)
+        this.content.template.classList.remove(this.content.animations.error)
+    }
+
+
     show() {
-        if (this.content.animations !== undefined){
-            this.content.template.classList.remove(this.content.animations.hide)
+        if (this.content.animations !== undefined) {
+            this.clearTemplateClasses()
             this.content.template.classList.add(this.content.animations.show)
         } else {
             if (this.content.display !== undefined) {
@@ -45,7 +69,7 @@ class PopUp {
 
     hide() {
         if (this.content.animations !== undefined) {
-            this.content.template.classList.remove(this.content.animations.show)
+            this.clearTemplateClasses()
             this.content.template.classList.add(this.content.animations.hide)
         } else {
             this.content.template.style.display = 'none'
