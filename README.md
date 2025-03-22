@@ -3,6 +3,13 @@ JSPop - JavaScript PopUp library.
 <p>
     Use JSPop for easy creating your popups. 
 </p>
+
+<h1>Types of PopUps <i>classes of PopUps which can be created:</i></h1> 
+<ul>
+    <li><a href='#templatePopup'>PopUp</a></li>
+    <li><a href='#errorPopup'>ErrorPopUp</a></li>
+</ul>
+
 <h1>Fast start:</h1>
 
 1) Add in HTML `<head>` teg:
@@ -89,12 +96,6 @@ document.querySelector('#show-popup').addEventListener('click', (e) => {
 
 
 <hr>
-
-<h1>Types of PopUps <i>classes of PopUps which can be created:</i></h1> 
-<ul>
-    <li><a href='#templatePopup'>PopUp</a></li>
-    <li><a href='#errorPopup'>ErrorPopUp</a></li>
-</ul>
 
 Content object in created PopUp:
 
