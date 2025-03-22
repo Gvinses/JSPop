@@ -86,3 +86,45 @@ document.querySelector('#show-popup').addEventListener('click', (e) => {
                 classes: .show-75rZ, .hide-75rZ
                 name: "popupAnimation-flex-75rZ.css"
     2) You can use any type of hosting code and optionaly it must be open source.
+
+
+<hr>
+
+<h1>Types of PopUps <i>classes of PopUps which can be created:</i></h1> 
+<ul>
+    <li><a href='templatePopup'>PopUp</a></li>
+    <li><a href='errorPopup'>ErrorPopUp</a></li>
+</ul>
+
+Content object in created PopUp:
+
+<h3 id='templatePopup'>JS template for <i>PopUp</i></h3>
+
+```
+{
+    'origin': body,
+    'template': popup,
+    'display': 'flex',
+    'animations': {
+        'show': 'show-75rZ',
+        'hide': 'hide-75rZ',
+    }
+}
+```
+
+<hr>
+
+<h3 id='errorPopup'>JS template for <i>ErrorPopUp</i></h3>
+
+```
+{
+    'origin': body,
+    'template': error,
+    'display': 'flex',
+    'errorStyle': 'error-style',
+    'animations': {
+        'show': 'show-75rZ',
+        'hide': 'hide-75rZ',
+    }
+}
+```
