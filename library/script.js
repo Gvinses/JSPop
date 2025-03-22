@@ -1,5 +1,6 @@
 let body = document.querySelector('body')
 let popup = document.querySelector('#testPopup')
+let error = document.querySelector('#errorPopup')
 
 let testPopUp = new PopUp(
     {
@@ -9,7 +10,6 @@ let testPopUp = new PopUp(
         'animations': {
             'show': 'show-75rZ',
             'hide': 'hide-75rZ',
-            'error': 'error-75rZ',
         }
     },
     {
@@ -25,10 +25,33 @@ let testPopUp = new PopUp(
         'origin': '#secondPopupButton',
         'event': 'click',
         'func': (event) => {
-            // testPopUp.self.style.background = `green`
+            testPopUp.self.style.background = `green`
+            errorPopup.load()
+            errorPopup.show()
         }
     },
 )
+
+let errorPopup = new ErrorPopUp(
+    {
+        'origin': body,
+        'template': error,
+        'display': 'flex',
+        'errorStyle': 'error-style',
+        'animations': {
+            'show': 'show-75rZ',
+            'hide': 'hide-75rZ',
+        }
+    },
+    {
+        'origin': '#closeErrorPopupButton',
+        'event': 'click',
+        'func': (event) => {
+            errorPopup.hide()
+        }
+    },
+)
+
 
 testPopUp.load()
 

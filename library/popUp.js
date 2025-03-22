@@ -76,3 +76,55 @@ class PopUp {
         }
     }
 }
+
+class ErrorPopUp extends PopUp {
+    savedStylesOfTemplate = ''
+    panel = document.createElement('div')
+
+    protectivePanelCreator() {
+
+        this.panel.style.margin = '-100px'
+        this.panel.style.padding = '0'
+        this.panel.style.boxSizing = 'border-box'
+
+        this.panel.style.display = 'flex'
+        this.panel.style.position = 'fixed'
+        this.panel.style.width = '150vw'
+        this.panel.style.height = '150vh'
+        this.panel.style.zIndex = '100'
+
+        if (this.content.errorStyle === undefined) {
+            this.panel.style.background = 'rgba(78, 74, 83, 0.5);'
+        } else {
+            this.panel.classList.add(this.content.errorStyle)
+        }
+
+        this.content.origin.appendChild(this.panel)
+    }
+
+    deleteProtectivePanel() {
+        this.content.origin.removeChild(this.panel)
+    }
+
+    showZIndexStylesOfTemplates() {
+        this.savedStylesOfTemplate = this.content.template.style.zIndex
+
+        this.content.template.style.zIndex = '1000'
+    }
+
+    resetZIndexStyle() {
+        this.content.template.style.zIndex = this.savedStylesOfTemplate
+    }
+
+    show() {
+        super.show()
+        this.protectivePanelCreator()
+        this.showZIndexStylesOfTemplates()
+    }
+
+    hide() {
+        this.resetZIndexStyle()
+        this.deleteProtectivePanel()
+        super.hide()
+    }
+}

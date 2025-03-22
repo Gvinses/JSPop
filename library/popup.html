@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <title>JSPop</title>
     <style>
-        .popup {
+        .popup, .error-popup {
             display: none;
             position: fixed;
-            top: 50%;
-            left: 50%;
+            top: 40%;
+            left: 40%;
             transform: translateX(-100%) translateY(-100%);
             background-color: rgb(0, 0, 0);
             color: #fff;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .error-style {
+            background: rgba(123, 63, 198, 0.5);
         }
     </style>
 
@@ -31,6 +35,11 @@
     <button id="secondPopupButton">Second Button</button>
 </div>
 
-    <script src="script.js"></script>
+<div class="error-popup" id="errorPopup">
+    <h1>ОШИБКА!</h1>
+    <button id="closeErrorPopupButton">Close</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
