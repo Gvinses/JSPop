@@ -8,11 +8,11 @@ let testPopUp = new PopUp(
         'template': popup,
         'display': 'flex',
         'animations': {
-            'show': 'show-75rZ',
-            'hide': 'hide-75rZ',
+            'show': 'show-75rX',
+            'hide': 'hide-75rX',
         }
     },
-    {
+    [{
         'origin': '#closePopupButton',
         'event': 'click',
         'func': (event) => {
@@ -21,15 +21,15 @@ let testPopUp = new PopUp(
             // testPopUp.deleteFromHTML()
         }
     },
-    {
-        'origin': '#secondPopupButton',
-        'event': 'click',
-        'func': (event) => {
-            testPopUp.self.style.background = `green`
-            errorPopup.load()
-            errorPopup.show()
-        }
-    },
+        {
+            'origin': '#secondPopupButton',
+            'event': 'click',
+            'func': (event) => {
+                testPopUp.self.style.background = `green`
+                errorPopup.load()
+                errorPopup.show()
+            }
+        }],
 )
 
 let errorPopup = new ErrorPopUp(
@@ -39,8 +39,8 @@ let errorPopup = new ErrorPopUp(
         'display': 'flex',
         'errorStyle': 'error-style',
         'animations': {
-            'show': 'show-75rZ',
-            'hide': 'hide-75rZ',
+            'show': 'show-75rX',
+            'hide': 'hide-75rX',
         }
     },
     {

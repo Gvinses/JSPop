@@ -9,7 +9,7 @@ function create_UUID() {
 class PopUp {
     constructor(content, ...events) {
         this.content = content
-        this.events = events
+        this.events = events[0]
         this.id = create_UUID()
         this.self = this.content.template
     }

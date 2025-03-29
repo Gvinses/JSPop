@@ -1,9 +1,9 @@
-.show-75rZ {
+.show-75rX {
     display: flex;
     animation: show-animation 0.3s ease-out forwards;
 }
 
-.hide-75rZ {
+.hide-75rX {
     animation: hide-animation 0.3s ease-out forwards;
 }
 

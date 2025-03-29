@@ -41,12 +41,12 @@ let testPopUp = new PopUp(
         'template': popup,        // PopUp HTML template
         'display': 'flex',        // Optional: atribute with choosen display for popup on page  
         'animations': {           // Optional: Your self animations for show / hide of popup on page 
-            'show': 'show',  // show - appear animation of popup
-            'hide': 'hide'   // hide - disappear animation on popup
+            'show': 'show',       // show - appear animation of popup
+            'hide': 'hide'        // hide - disappear animation on popup
         }
     },
-// All objects, after first object - events of popup:
-    {                                               // button (possible to use ANY html teg which parent is template of popup)
+// One array with object - events of popup:
+    [{                                              // button (possible to use ANY html teg which parent is template of popup)
         'origin': '#closePopupButton',              // Setting teg on HTML, which will be used in event 
         'event': 'click',                           // Event of user interaction with "origin" teg 
         'func': (event) => {                        // function, what will be after event
@@ -60,7 +60,7 @@ let testPopUp = new PopUp(
         'func': (event) => {
             testPopUp.self.style.background = `green`
         }
-    },
+    }]
 )
 
 testPopUp.load()                                    // method of class to "render" every functions methods and styles (MUST BE BEFORE show popup)
@@ -82,8 +82,8 @@ document.querySelector('#show-popup').addEventListener('click', (e) => {
         Example:
            ```
            'animations': {
-               'show': 'show-75rZ',
-               'hide': 'hide-75rZ',
+               'show': 'show-75rX',
+               'hide': 'hide-75rX',
             }
            ```
 5) Creating <b>your</b> animation pack:
@@ -107,8 +107,8 @@ Content object in created PopUp:
     'template': popup,
     'display': 'flex',
     'animations': {
-        'show': 'show-75rZ',
-        'hide': 'hide-75rZ',
+        'show': 'show-75rX',
+        'hide': 'hide-75rX',
     }
 }
 ```
@@ -124,8 +124,8 @@ Content object in created PopUp:
     'display': 'flex',
     'errorStyle': 'error-style',
     'animations': {
-        'show': 'show-75rZ',
-        'hide': 'hide-75rZ',
+        'show': 'show-75rX',
+        'hide': 'hide-75rX',
     }
 }
 ```
