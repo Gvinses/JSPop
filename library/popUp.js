@@ -6,7 +6,7 @@ function create_UUID() {
     })
 }
 
-class PopUp {
+export class PopUp {
     constructor(content, ...events) {
         this.content = content
         this.events = events[0]
@@ -77,7 +77,7 @@ class PopUp {
     }
 }
 
-class ErrorPopUp extends PopUp {
+export class ErrorPopUp extends PopUp {
     savedStylesOfTemplate = ''
     panel = document.createElement('div')
 
