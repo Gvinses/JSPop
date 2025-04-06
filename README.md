@@ -12,9 +12,9 @@ JSPop - JavaScript PopUp library.
 
 <h1>Fast start:</h1>
 
-1) Add in HTML `<head>` teg:
+1) Add in JS file:
 ```
-<script src="https://gvinses.github.io/JSPop/library/popUp.js"></script>
+import {PopUp} from 'https://gvinses.github.io/JSPop/library/popUp.js'
 ```
 
 2) Create Popup anywhere in HTML:
@@ -27,11 +27,13 @@ JSPop - JavaScript PopUp library.
 ``` 
 2.5) Create and connect .js file to HTML after import JSPop line:
 ```
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 ```
 
 3) Edit .js file:
 ```
+import {PopUp} from 'https://gvinses.github.io/JSPop/library/popUp.js'
+
 let body = document.querySelector('body')        
 let popup = document.querySelector('#testPopup')
 
