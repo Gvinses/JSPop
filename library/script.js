@@ -1,3 +1,5 @@
+import {PopUp, ErrorPopUp} from './popUp.js';
+
 let body = document.querySelector('body')
 let popup = document.querySelector('#testPopup')
 let error = document.querySelector('#errorPopup')
